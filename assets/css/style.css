@@ -515,11 +515,11 @@ a {
     cursor: pointer;
 }
 
-.tab__item:hover.tab__item::after {
+.tab__item-active.tab__item::after {
     display: inline-block;
     content: "";
     position: absolute;
-    width: 60%;
+    width: 100px;
     height: 2px;
     border-radius: 1px;
     background-color: #ff5b2e;

@@ -348,7 +348,7 @@
                             </p>
                             <div class="tab">
                                 <ul class="tab__list">
-                                    <li class="tab__item">
+                                    <li class="tab__item tab__item-active">
                                         <img
                                             src="./assets/img/tab-icon-1.png"
                                             alt=""
@@ -381,29 +381,29 @@
                                 </ul>
                                 <div class="tab__contents">
                                     <!-- tab 1 -->
-                                    <div class="tab__content-item">
-                                        <p class="tab__content-desc">
-                                            While you're on holiday, here's
-                                            where your furry friends will spend
-                                            their time 1.
-                                        </p>
-                                        <a href="#!" class="tab__content-more"
-                                            >View more</a
-                                        >
-                                    </div>
-
-                                    <!-- tab 2 -->
                                     <div
                                         class="tab__content-item tab__content-item--active"
                                     >
                                         <p class="tab__content-desc">
                                             While you're on holiday, here's
                                             where your furry friends will spend
+                                            their time 1.
+                                        </p>
+                                        <a href="#!" class="tab__content-more">
+                                            View more
+                                        </a>
+                                    </div>
+
+                                    <!-- tab 2 -->
+                                    <div class="tab__content-item">
+                                        <p class="tab__content-desc">
+                                            While you're on holiday, here's
+                                            where your furry friends will spend
                                             their time 2.
                                         </p>
-                                        <a href="#!" class="tab__content-more"
-                                            >View more</a
-                                        >
+                                        <a href="#!" class="tab__content-more">
+                                            View more
+                                        </a>
                                     </div>
 
                                     <!-- tab 3 -->
@@ -413,9 +413,9 @@
                                             where your furry friends will spend
                                             their time 3.
                                         </p>
-                                        <a href="#!" class="tab__content-more"
-                                            >View more</a
-                                        >
+                                        <a href="#!" class="tab__content-more">
+                                            View more
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -563,5 +563,33 @@
                 </div>
             </section>
         </main>
+
+        <script>
+            const tabs = document.querySelectorAll(".tab__item");
+            const contents = document.querySelectorAll(".tab__content-item");
+
+            const line = document.querySelector(
+                ".tab__item-active.tab__item::after"
+            );
+            line.style.left = "";
+            // line.style.width = tab[0].offsetWidth + "px";
+
+            tabs.forEach((tab, index) => {
+                const content = contents[index];
+                tab.onclick = function () {
+                    document
+                        .querySelector(".tab__item.tab__item-active")
+                        .classList.remove("tab__item-active");
+                    this.classList.add("tab__item-active");
+
+                    document
+                        .querySelector(
+                            ".tab__content-item.tab__content-item--active"
+                        )
+                        .classList.remove("tab__content-item--active");
+                    content.classList.add("tab__content-item--active");
+                };
+            });
+        </script>
     </body>
 </html>
