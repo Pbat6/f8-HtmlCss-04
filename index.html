@@ -424,6 +424,7 @@
                 </div>
             </section>
 
+            <!-- Service -->
             <section class="service">
                 <div class="container">
                     <section class="service__top">
@@ -562,16 +563,119 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Staff -->
+            <section class="staff">
+                <div class="container">
+                    <p class="staff__desc">Pet Care Staff</p>
+                    <h2 class="section-heading staff__heading">
+                        Meet Our Groomers
+                    </h2>
+                    <div class="staff__list">
+                        <article class="staff-item">
+                            <figure
+                                class="staff-item__img-wrap"
+                                style="
+                                    --staff-bg-color: linear-gradient(
+                                        180deg,
+                                        #90ccff 0%,
+                                        #59a8eb 95.96%
+                                    );
+                                "
+                            >
+                                <img
+                                    src="./assets/img/staff-1.png"
+                                    alt=""
+                                    class="staff-item__img"
+                                />
+                            </figure>
+                            <span class="staff-item__title">Pet Trainer</span>
+                            <h3 class="staff-item__name">Meghan Samit</h3>
+                        </article>
+
+                        <!-- 2 -->
+                        <article class="staff-item">
+                            <figure
+                                class="staff-item__img-wrap"
+                                style="
+                                    --staff-bg-color: linear-gradient(
+                                        180deg,
+                                        #ff997e 0%,
+                                        #f3752e 100%
+                                    );
+                                "
+                            >
+                                <img
+                                    src="./assets/img/staff-2.png"
+                                    alt=""
+                                    class="staff-item__img"
+                                />
+                            </figure>
+                            <span class="staff-item__title">Veterinarian</span>
+                            <h3 class="staff-item__name">Alissa Silva</h3>
+                        </article>
+
+                        <!-- 3 -->
+                        <article class="staff-item">
+                            <figure
+                                class="staff-item__img-wrap"
+                                style="
+                                    --staff-bg-color: linear-gradient(
+                                        180deg,
+                                        #fabf3e 0%,
+                                        #ffa14a 100%
+                                    );
+                                "
+                            >
+                                <img
+                                    src="./assets/img/staff-3.png"
+                                    alt=""
+                                    class="staff-item__img"
+                                />
+                            </figure>
+                            <span class="staff-item__title">Veterinarian</span>
+                            <h3 class="staff-item__name">Cindy Harris</h3>
+                        </article>
+
+                        <!-- 4 -->
+                        <article class="staff-item">
+                            <figure
+                                class="staff-item__img-wrap"
+                                style="
+                                    --staff-bg-color: linear-gradient(
+                                        180deg,
+                                        #5bd6e2 0%,
+                                        #00a7cc 100%
+                                    );
+                                "
+                            >
+                                <img
+                                    src="./assets/img/staff-4.png"
+                                    alt=""
+                                    class="staff-item__img"
+                                />
+                            </figure>
+                            <span class="staff-item__title">
+                                Animal Caretaker
+                            </span>
+                            <h3 class="staff-item__name">Lucas Tony</h3>
+                        </article>
+                    </div>
+                    <div class="staff__more-wrap">
+                        <a href="#!" class="staff__more">View All Team</a>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <script>
             const tabs = document.querySelectorAll(".tab__item");
             const contents = document.querySelectorAll(".tab__content-item");
 
-            const line = document.querySelector(
-                ".tab__item-active.tab__item::after"
-            );
-            line.style.left = "";
+            // const line = document.querySelector(
+            //     ".tab__item-active.tab__item::after"
+            // );
+            // line.style.left = "";
             // line.style.width = tab[0].offsetWidth + "px";
 
             tabs.forEach((tab, index) => {
